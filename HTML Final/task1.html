@@ -136,7 +136,8 @@
             <br>
             <p>
                 <label>Email:</label>
-                <input type="email" placeholder="It should contain @"  required>
+                <input type="email" placeholder="It should contain @"  pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*"
+                required>
             </p>
 
             <br>
@@ -207,8 +208,9 @@
             <br>
             <p>
                 <label>Password:</label>
-                <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[a-zA-Z\d@$!%*#?&]{8}"
-                    placeholder="Must conatin Uppercase, Lowercase, Special Charater, At least 8 letter long" required>
+                <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[a-zA-Z\d@$!%*#?&]{8,}"
+                    placeholder="Must conatin Uppercase, Lowercase, Special Charater, At least 8 letter long" 
+                    title="Must conatin Uppercase, Lowercase, Special Charater, At least 8 letter long" required>
                 <br>
 
             </p>
