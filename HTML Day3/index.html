@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Customer services</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<header>
+    <div class="logo">Logo</div>
+    <div class="profile">
+        <span>Super Admin</span>
+        <img src=""  alt="img"/>
+    </div>
+</header>
+
+<div class="container">
+    <div class="sidebar">
+        <a href="#customer">Customer</a>
+        <a href="#invoice">Invoice</a>
+        <a href="#report">Report</a>
+    </div>
+
+    <div class="main">
+        <section id="customer" class="page"> <!--section for customer-->
+            <div class="card">
+                <h2> Customer</h2>
+                <div class="top-bar">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search" />
+                        <select>
+                            <option>Status</option>
+                            <option>Active</option>
+                            <option>Inactive</option>
+                        </select>
+                    </div>
+
+                    <button onclick="openModal()" class="add-btn">+ Add Customer</button>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Company name</th>
+                        <th>Email</th>
+                        <th>Mobile number</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="status-active">Active</td>
+                        <td class="actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash-fill"></i>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="status-inactive">Inactive</td>
+                        <td class="actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash-fill"></i>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash-fill"></i>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash-fill"></i>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash-fill"></i>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash-fill"></i>
+                        </td>
+                    </tr>
+
+                </table>
+                <div class="pagination">
+                    <button>&lt;</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>&gt;</button>
+                </div>
+            </div>
+
+            <!--CUSTOMER CARD-->
+            <div id="customerModal" class="modal">
+                <div class="modal-card">
+
+                    <h3>Add customer</h3>
+
+                    <div class="form-grid">
+                        <div>
+                            <label>Name</label>
+                            <input type="text" required>
+                        </div>
+
+                        <div>
+                            <label>Company name</label>
+                            <input type="text" required>
+                        </div>
+
+                        <div>
+                            <label>Email</label>
+                            <input type="email" required>
+                        </div>
+
+                        <div>
+                            <label>Mobile number</label>
+                            <input type="tel" pattern="[0-9]{10}">
+                        </div>
+
+                        <div class="full">
+                            <label>Address</label>
+                            <textarea required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button onclick="closeModal()">Cancel</button>
+                        <button class="save-btn" onclick="saveData()">Save</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="invoice" class="page"> <!--section for invoice-->
+            <div class="card">
+                <h2> Invoice</h2>
+                <div class="top-bar">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search" />
+                        <select>
+                            <option> Payment Status</option>
+                            <option>Paid</option>
+                            <option>Partially Paid</option>
+                            <option>Unpaid</option>
+                        </select>
+                    </div>
+
+                    <button onclick="openInvoiceModal()" class="add-btn">+ Add Invoice</button>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Number</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Due date </th>
+                        <th> Payment Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="status-active">Paid</td>
+                        <td class="actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash-fill"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="status-partialpaid">Partially paid</td>
+                        <td class="actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash-fill"></i>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="status-inactive">Inactive</td>
+                        <td class="actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash-fill"></i>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash-fill"></i>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash-fill"></i>
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash-fill"></i>
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash-fill"></i>
+                        </td>
+                    </tr>
+
+
+                </table>
+                <div class="pagination">
+                    <button>&lt;</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>&gt;</button>
+                </div>
+            </div>
+
+            <!--invoice card-->
+            <div id="InvoiceModal" class="modal">
+                <div class="modal-card">
+
+                    <h3>Add Invoice</h3>
+
+                    <div class="form-grid">
+                        <div>
+                            <label>Number</label>
+                            <input type="number" required min="0">
+                        </div>
+
+                        <div>
+                            <label>Customer</label>
+                            <select style="height: 30px; 
+                    " required>
+                                <option value="">Select Customer</option>
+                                <option>Regular</option>
+                                <option>Rarely</option>
+                                <option>Permenent</option>
+
+                            </select>
+                        </div>
+
+                        <div>
+                            <label>Date</label>
+                            <input type="date" required>
+                        </div>
+
+                        <div>
+                            <label>Due date</label>
+                            <input type="date">
+                        </div>
+
+                        <div>
+                            <label>Quantity</label>
+                            <select style="height: 30px; 
+                    " required>
+                                <option vlaue="">Select Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label>Rate</label>
+                            <input type="number" min="0">
+                        </div>
+
+                        <div class="full">
+                            <label>Description</label>
+                            <textarea required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button onclick="icloseModal()">Cancel</button>
+                        <button class="save-btn" onclick="isaveData()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="report" class="page"> <!--section for report-->
+            <div class="card">
+                <h2>Report</h2>
+                <div class="top-bar">
+                    <p> Financial Year:2023-2024 | Currency <b>AUD</b></p>
+                    <button style="background-color:lightblue; border-radius: 7px; height: 30px;">AUD($) in Thousand
+                    </button>
+                </div>
+                <table>
+                    <tr>
+                        <th style="text-align: left; background: white" rowspan="2">Accounts</th>
+                        <th style="background: white" colspan="2">S1(Feb 2023-Jul 2023)</th>
+                        <th style="background: white" colspan="2">S2(Aug 2023-Jan 2024)</th>
+                        <th style="background: white" rowspan="2"> FYT</th>
+                    </tr>
+                    <tr>
+                        <th style="background: white">Aggregated</th>
+                        <th style="background: white">Consolidated</th>
+                        <th style="background: white">Aggregated</th>
+                        <th style="background: white">Consolidated</th>
+                    </tr>
+
+                    <tr>
+                        <th style="background: white" style="text-align: left;">Revenue</th>
+                        <td></td>
+                        <td colspan="4"></td>
+                    </tr>
+
+                    <tr>
+                        <td>2002 S A A S Recurring</td>
+                        <td style="text-align: right;">$100.00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>201 - Subcription</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>202 - Transaction/Usage</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th>Total 200 SAAS Recurring</th>
+                        <th style="text-align: right;">$100.00</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+
+                    <tr>
+                        <td>209 - Service Revenue</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>202 -Transaction/Usage</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>220 -Hardware</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>250 -Other</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left;">Total Revenue</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><b>Cost of Goods Sold</b></td>
+                        <td></td>
+                        <td colspan="4"></td>
+                    </tr>
+
+                    <tr>
+                        <td>300 -SAAS Cost of Sales</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>301 -Tech Support</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>302 -DevOps</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left;">Total SAAS Cost of sales</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left;">Gross Profit</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><b>Expense</b></td>
+                        <td></td>
+                        <td colspan="4"></td>
+                    </tr>
+                    <tr>
+                        <td>402 -Sales Expenses</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>403 -Marketing Expenses</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td style="text-align: left;">Total expense</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+            </div>
+        </section>
+    </div>
+</div>
+<script src="script.js"></script>
+
+<!--delete popup-->
+
+<div id="deleteModal" class="modal">
+    <div class="modal-card delete-box">
+
+        <div class="delete-icon">✖</div>
+
+        <h3>Are you sure?</h3>
+        <p>Are you sure you want to delete this record?</p>
+
+        <div class="modal-actions">
+            <button class="cancel-btn" onclick="closeDelete()">Cancel</button>
+            <button class="delete-btn" onclick="confirmDelete()">Delete</button>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+</html>

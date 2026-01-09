@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image only</title>
+  </head>
+
+  <body>
+    <fieldset><h2>Allow Only if Image</h2></fieldset>
+
+    <fieldset>
+      <p>
+        select image:
+        <input type="file" id="filebox" accept="image/*" required />
+      </p>
+
+      <button
+        type="submit"
+        onclick=" var file =document.getElementById('filebox').files[0];
+        
+        if(file && file.type.includes('image')){
+            document.getElementById('result').innerHTML= 'File is Image' + '<br> File type:' +file.type;
+            alert('Image uploaded !');
+        }
+        else{
+            document.getElementById('result').innerHTML='not an image file';
+        }"
+      >
+        Upload image
+      </button>
+
+      <p id="result"></p>
+    </fieldset>
+  </body>
+</html>

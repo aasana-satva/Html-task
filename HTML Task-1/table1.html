@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Table Task</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 1px solid #000;
+    padding: 4px;
+    text-align: center;
+}
+input[type="checkbox"]{
+    width: 14px;
+    height: 14px;
+}
+
+.header-table td{
+    /* font-weight: bold; */
+    text-align: center;
+    border: none;
+}
+
+.header-table tr{
+    border: 1px solid #000;
+}
+
+.center{
+    text-align: center !important;
+}
+
+.name{
+    text-align: left;
+}
+ .facno{
+    text-align: left;
+ }
+
+.small{
+    width: 35px;
+    text-align: center;
+}
+
+.medium{
+    width: 45px;
+    text-align: center;
+}
+
+input[type="text"]{
+    height: 18px;
+    font-size: 11px;
+}
+
+.save-btn{
+    display: block;
+    margin: 10px auto;
+    padding: 3px 18px;
+    font-size: 12px;
+}
+
+</style>
+</head>
+
+<body>
+<!--header table-->
+<table class="header-table">
+    <tr>
+        <td>Faculty: Faculty of Computer Systems and Control</td>
+        <td>Speciality: Computer Systems and Technologies</td>
+        <td>Group: C04S01G62</td>
+    </tr>
+    <tr>
+        <td>Day: Monday</td>
+        <td>Laboratory: 3241</td>
+        <td>Time: 7:30</td>
+    </tr>
+</table>
+
+
+<p style="text-align: center;"> Even Week</p>
+<!--Table-->
+<table>
+       
+            <th rowspan="2">No.</th>
+            <th>Name</th>
+            <th>Fac number</th>
+            <th>Ex. 1</th>
+            <th>Ex. 2</th>
+            <th>Ex. 3</th>
+            <th>Ex. 4</th>
+            <th>Pr. 1</th>
+            <th>Pr. 2</th>
+            <th rowspan="3">SA</th>
+            <th rowspan="3">Mark SA</th>
+            <th rowspan="3">SP</th>
+            <th rowspan="3">Mark SP</th>
+            <th rowspan="3">Control work 1</th>
+            <th rowspan="3">Control work 2</th>
+            <th rowspan="3">Mark</th>
+            <th rowspan="3">Sign</th>
+        </tr>
+    
+        <!-- HEADER ROW 3 -->
+        <tr>
+            <!-- <th></th> -->
+            <th rowspan="2">Year:2012</th>
+            <th rowspan="2">Date</th>
+            
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    
+
+    <!-- ROW 1 -->
+    <tr>
+        <td class="facno">1.</td>
+        <td class="name">Ana Filcheva</td>
+        <td class="facno">123208011</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input class="small" type="text"></td>
+        <td><input class="small" type="text"></td>
+        <td><input class="small" type="text"></td>
+        <td><input class="small" type="text"></td>
+        <td><input class="medium" type="text"></td>
+        <td><input class="medium" type="text"></td>
+        <td></td>
+        <td><input type="checkbox"></td>
+    </tr>
+
+    <!-- ROW 2 -->
+    <tr>
+        <td class="facno">2.</td>
+        <td class="name">Aneta Petkova</td>
+        <td class="facno">121208143</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input class="small" type="text"></td>
+        <td><input class="small" type="text"></td>
+        <td><input class="small" type="text"></td>
+        <td><input class="small" type="text"></td>
+        <td><input class="medium" type="text"></td>
+        <td><input class="medium" type="text"></td>
+        <td></td>
+        <td><input type="checkbox"></td>
+    </tr>
+
+    <!--ROW 3-->
+   
+    <tr>
+        <td class="facno">3.</td>
+        <td class="name">Angel Vasilev</td>
+        <td class="facno">121208138</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input class="small" type="text"></td>
+        <td><input class="small" type="text"></td>
+        <td><input class="small" type="text"></td>
+        <td><input class="small" type="text"></td>
+        <td><input class="medium" type="text"></td>
+        <td><input class="medium" type="text"></td>
+        <td></td>
+        <td><input type="checkbox"></td>
+    </tr>
+
+    <!-- ROW 4 (MARTY BORISOV) -->
+    <tr>
+        <td class="facno">4.</td>
+        <td class="name">Marty Borisov</td>
+        <td class="facno">121208160</td>
+        <td><input type="checkbox" checked></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox" checked></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input class="small" type="text" value="123"></td>
+        <td><input class="small" type="text" value="5"></td>
+        <td><input class="small" type="text" value="43"></td>
+        <td><input class="small" type="text"></td>
+        <td><input class="medium" type="text" value="6"></td>
+        <td><input class="medium" type="text" value="6"></td>
+        <td></td>
+        <td><input type="checkbox" checked></td>
+    </tr>
+</table>
+
+<br>
+
+<button class="save-btn">Save</button>
+
+</body>
+</html>
+

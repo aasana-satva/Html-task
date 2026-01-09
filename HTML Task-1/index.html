@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Registration form</title>
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #f0f4ff;
+        margin: 0;
+      }
+
+      header,
+      footer {
+        background-color: #4452cc;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      main {
+        padding: 20px;
+        max-width: 900px;
+        margin: auto;
+        background-color: white;
+      }
+
+      form {
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        column-gap: 15px;
+        row-gap: 12px;
+      }
+
+      label {
+        text-align: right;
+        font-weight: bold;
+        padding-top: 6px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 7px;
+      }
+
+      button {
+        grid-column: 2;
+        width: 150px;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #4452cc;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      p,
+      h2 {
+        text-align: center;
+      }
+
+      .gender-wrapper {
+        width: 100%;
+      }
+
+      .gender-group {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        height: 100%;
+        margin-left: 90px;
+      }
+
+      img{
+        margin-left: 40%;
+      }
+    </style>
+
+    <script>
+      function welcome() {
+        document.getElementById("message").innerHTML =
+          "Welcome to our registration  Page!";
+      }
+      function submitted() {
+        alert("Form submitted successfully!");
+      }
+
+      function highlight(x) {
+        x.style.background = "#e0e7ff";
+      }
+
+      function normal(x) {
+        x.style.background = "white";
+      }
+    </script>
+  </head>
+  <body onload="welcome()">
+    <header>
+      <h1>Student Registration Form</h1>
+    </header>
+    <main>
+      <img
+        src="https://picsum.photos/seed/picsum/200/" height="40%"
+        alt="Welcome image"
+      />
+      <h2>
+        This Form is required to be filled by the Student for the registration.
+      </h2>
+      <p><b>Instructions to fill the from are given below.</b></p>
+      <ul>
+        <li>The details should be filled correctly.</li>
+        <li>Please recheck all the details before submitting the form.</li>
+      </ul>
+      <form onsubmit="submitted()">
+        <label> Name: </label>
+        <input
+          type="text"
+          onfocus="highlight(this)"
+          onblur="normal(this)"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label> Email: </label>
+        <input
+          type="email"
+          onfocus="highlight(this)"
+          onblur="normal(this)"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label> Password: </label>
+        <input
+          type="password"
+          onfocus="highlight(this)"
+          onblur="normal(this)"
+          placeholder="Enter your Password"
+          required
+        />
+
+        <label> Age: </label>
+        <input
+          type="number"
+          onfocus="highlight(this)"
+          onblur="normal(this)"
+          placeholder="Enter your age"
+          required
+        />
+
+        <label>Gender:</label>
+        <div class="gender-wrapper">
+          <div class="gender-group">
+            <label><input type="radio" name="gender" required /> Male</label>
+            <label><input type="radio" name="gender" /> Female</label>
+          </div>
+        </div>
+
+        <label>Course:</label>
+        <select onfocus="highlight(this)" onblur="normal(this)">
+          <option>HTML</option>
+          <option>CSS</option>
+          <option>JavaScript</option>
+        </select>
+
+        <label>Message:</label>
+        <textarea
+          onfocus="highlight(this)"
+          onblur="normal(this)"
+          rows="2"
+          placeholder="Enter your message here"
+        ></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p><b>Thanks for filling the form.</b></p>
+      <p>
+        For any query please contact to the link given-<a
+          href="https://google.com"
+          target="_blank"
+          >Click here</a
+        >
+      </p>
+    </main>
+    <footer>
+      <p>© 2026 Student Registration System | All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Customer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!--focus on name-->
+  <!--<body onload="document.getElementById('fname').focus()">-->
+    <div class="wrapper">
+      <!--sidebar-->>
+      <div class="sidebar">
+        <h2>ZOHO</h2>
+        <div class="menu">
+          <p><i class="bi bi-speedometer2"></i> Dashboard</p>
+          <p><i class="bi bi-box"></i> Items</p>
+          <p><i class="bi bi-bank"></i> Banking</p>
+          <br />
+          <div class="dropdown">
+            <div class="drop-title"><i class="bi bi-cart"></i> Sales ▾</div>
+            <div class="drop-items">
+              <p>Customers <span class="plus">+</span></p>
+              <p>Retainer Invoices</p>
+              <p>Invoices</p>
+              <p>Payments Received</p>
+              <p>Recurring Invoices</p>
+              <p>Credit Notes</p>
+            </div>
+          </div>
+          <br />
+          <p><i class="bi bi-bag"></i> Pusrchase ▾</p>
+          <br />
+          <p><i class="bi bi-clock"> </i> Time Tracking ▾</p>
+          <p><i class="bi bi-receipt"></i> e-Way Bills</p>
+          <p><i class="bi bi-file-earmark-text"></i> GST Filing</p>
+        </div>
+      </div>
+
+      <!--main-->
+      <div class="main">
+        <div class="utility-bar">
+          <div class="left">
+            <i class="bi bi-plus-circle"></i>
+            <i class="bi bi-clock-history"></i>
+
+            <input type="text" placeholder="Search in Customers" />
+          </div>
+
+          <div class="right">
+            <span><b>Satva Solutions</b></span>
+            <i class="bi bi-people"></i>
+            <i class="bi bi-bell"></i>
+            <i class="bi bi-gear"></i>
+            <i class="bi bi-question-circle"></i>
+            <img src="" alt="profile img" />
+          </div>
+        </div>
+
+        <div class="topbar">New Customer</div>
+
+        <div class="content">
+          <form>
+            <div class="form-row">
+              <label>Customer Type</label>
+              <input type="radio" name="type" required /> Business
+              <input type="radio" name="type" /> Individual
+            </div>
+
+            <div class="form-row">
+              <label>Primary Contact</label>
+              <select required>
+                <option value="">Salutation</option>
+                <option>Mr</option>
+                <option>Ms</option>
+              </select>
+
+              <input type="text" id="fname" placeholder="First Name" required  autofocus/>
+              <input type="text" placeholder="Last Name" required />
+            </div>
+
+            <div class="form-row">
+              <label>Company Name</label>
+              <input type="text" required />
+            </div>
+
+            <div class="form-row">
+              <label>Company Display Name </label>
+              <select required >
+                <option value="">select company</option>
+                <option>ABC</option>
+                <option>XYZ</option>
+                <option>DEF</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label> Email</label>
+              <input type="email" required />
+            </div>
+
+            <div class="form-row phone">
+              <label>Phone</label>
+              <input
+                type="tel"
+                pattern="[0-9]{10}"
+                placeholder="Work Phone"
+                required
+              />
+              <input type="tel" pattern="[0-9]{10}" placeholder="Mobile" />
+            </div>
+
+            <div class="form-row">
+              <label>Website</label>
+              <input type="url" placeholder="https://example.com" required />
+            </div>
+
+            <div class="buttons">
+              <button type="submit" class="save">Save</button>
+              <button type="reset" class="cancel">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
