@@ -124,20 +124,23 @@
         <form onsubmit="alert('The data is Registered')">
             <p>
                 <label>First Name:</label>
-                <input type="text" placeholder="Enter your first name" required autofocus>
+                <input type="text" placeholder="Enter your first name" pattern="[A-Za-z]"
+                    onkeypress="return event.charCode>=65 && event.charCode<=122" required autofocus>
             </p>
             <br>
 
             <p>
                 <label>Last Name:</label>
-                <input type="text" placeholder="Enter your last name" required>
+                <input type="text" placeholder="Enter your last name" pattern="[A-Za-z]"
+                onkeypress="return event.charCode>=65 && event.charCode<=122" required>
             </p>
 
             <br>
             <p>
                 <label>Email:</label>
-                <input type="email" placeholder="It should contain @"  pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*"
-                required>
+                <input type="email" placeholder="It should contain @"
+                    pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*"
+                    required>
             </p>
 
             <br>
@@ -169,21 +172,23 @@
             <br>
             <p>
                 <label>City:</label>
-                <input type="text" required>
+                <input type="text"  pattern="[A-Za-z]"
+                onkeypress="return event.charCode>=65 && event.charCode<=122" required>
             </p>
 
             <br>
             <p>
                 <label>Pin:</label>
                 <input type="tel" pattern="[0-9]{6}" maxlength="6"
-                    onkeypress="return event.charCode>=48 && event.charCode<=57"
-                    placeholder="only 6 digits are allowed" required>
+                    onkeypress="return event.charCode>=48 && event.charCode<=57" placeholder="only 6 digits are allowed"
+                    required>
             </p>
 
             <br>
             <p>
                 <label>State:</label>
-                <input type="text" required>
+                <input type="text" pattern="[A-Za-z]"
+                onkeypress="return event.charCode>=65 && event.charCode<=122" required>
             </p>
             <br>
             <p>
@@ -210,7 +215,7 @@
             <p>
                 <label>Password:</label>
                 <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[a-zA-Z\d@$!%*#?&]{8,}"
-                    placeholder="Must conatin Uppercase, Lowercase, Special Charater, At least 8 letter long" 
+                    placeholder="Must conatin Uppercase, Lowercase, Special Charater, At least 8 letter long"
                     title="Must conatin Uppercase, Lowercase, Special Charater, At least 8 letter long" required>
                 <br>
 
