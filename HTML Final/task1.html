@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task 1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: white;
+            margin: 0;
+        }
+
+        /* Header */
+        header {
+            background: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #b22222;
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* Outer form box */
+        .main {
+            width: fit-content;
+            margin: 30px auto;
+            background: #f0f0f0;
+            border: 1px solid #999;
+            padding: 25px;
+        }
+
+        form{
+            display: table;
+        }
+
+        p{
+            display: table-row;
+        }
+
+        input{
+            display: table-cell;
+        }
+
+        input[type="text"] {
+  border: 2px solid #1d1c1c;
+  border-radius: 4px;
+  height: 30px;
+  width: 700px;
+}
+
+input[type="email"] {
+  border: 2px solid #1d1c1c;
+  border-radius: 4px;
+  height: 30px;
+  width: 700px;
+}
+
+input[type="password"] {
+border: 2px solid #1d1c1c;
+  border-radius: 4px;
+  height: 30px;
+  width: 700px;
+}
+
+input[type="tel"] {
+  border: 2px solid #1d1c1c;
+  border-radius: 4px;
+  height: 30px;
+  width: 700px;
+}
+
+input[type="date"] {
+  border: 2px solid #1d1c1c;
+  border-radius: 4px;
+  height: 30px;
+  width: 700px;
+}
+
+textarea{
+    border: 2px solid #1d1c1c;
+  border-radius: 4px;
+  width: 700px;
+  resize: vertical;
+  
+}
+
+        label{
+            display: table-cell;
+        }
+
+        /* Button */
+        button {
+            grid-column: 2;
+            margin-top: 15px;
+            width: 120px;
+            padding: 7px;
+            background: #1a8f1a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            background: #146e14;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        Student Registration Form
+    </header>
+
+    <div class="main">
+        <a href="" onclick="alert('this is Student Registration form')"
+            style="color: #b22222; cursor: pointer; margin-left: 75%;">Student Registration form</a>
+        <form onsubmit="alert('The data is Registered')">
+            <p>
+                <label>First Name:</label>
+                <input type="text" placeholder="Enter your first name" required>
+            </p>
+            <br>
+
+            <p>
+                <label>Last Name:</label>
+                <input type="text" placeholder="Enter your last name" required>
+            </p>
+
+            <br>
+            <p>
+                <label>Email:</label>
+                <input type="email" placeholder="It should contain @" required>
+            </p>
+
+            <br>
+            <p>
+                <label>Mobile:</label>
+                <input type="tel" pattern="[0-9]{10}" maxlength="10"
+                    onkeypress="return event.charCode>=48 && event.charCode<=57"
+                    placeholder="only 10 digits are allowed" required>
+            </p>
+            <br>
+            <p>
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="male" checked required> Male
+                <input type="radio" name="gender" value="male"> Female
+
+            </p>
+            <br>
+            <p>
+                <label>Date Of Birth:</label>
+                <input type="date" required>
+            </p>
+
+            <br>
+            <p>
+                <label>Address:</label>
+                <textarea rows="3" required></textarea>
+            </p>
+
+            <br>
+            <p>
+                <label>City:</label>
+                <input type="text" required>
+            </p>
+
+            <br>
+            <p>
+                <label>Area PIN:</label>
+                <input type="tel" onkeypress="return event.charCode>=48 && event.charCode<=57" maxlength="6"
+                    placeholder="Enter 6 digit pincode" required>
+            </p>
+
+            <br>
+            <p>
+                <label>State:</label>
+                <input type="text" required>
+            </p>
+            <br>
+            <p>
+                <label>Qualification:</label>
+                <select required>
+                    <option value="">Select Qualification</option>
+                    <option>BCA</option>
+                    <option>MCA</option>
+                    <option>BSC</option>
+                    <option>BSC</option>
+                    <option>Btech</option>
+                    <option>Mtech</option>
+                </select>
+            </p>
+            <br>
+            <p>
+                <label>Specialization:</label>
+                <input type="checkbox" name="spec" > Computer Science  <br>
+                <input type="checkbox" name="spec"> Information Teachnology <br>
+                <input type="checkbox" name="spec"> Computer Architecture <br>
+                <input type="checkbox" name="spec"> Tale Communication <br>
+            </p>
+            <br>
+            <p>
+                <label>Password:</label>
+                <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[a-zA-Z\d@$!%*#?&]{8}"
+                    placeholder="Must conatin Uppercase, Lowercase, Special Charater, At least 8 letter long" required>
+                <br>
+
+            </p>
+            <button type="submit">Registered</button>
+        </form>
+
+
+    </div>
+</body>
+
+</html>
