@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="About Company provides professional web development, software services, and innovative digital solutions to help businesses grow. Learn more about our mission, projects, and technology stack.">
+    <meta name="keywords"
+        content="About Company, Web Development, Software Company, IT Services, Digital Solutions, Technology Consulting, Projects, Tech Stack">
+
+    <meta name="author" content="About Company">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #f2f1f7;
+            color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            /* Prevent full page scroll */
+        }
+
+        section {
+            flex: 1;
+            overflow-y: auto;
+            padding: 60px 8%;
+        }
+
+        /* Header */
+        .header {
+            background: #ffffff;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        /* Scrollable Content Area */
+        section {
+            flex: 1;
+            overflow-y: auto;
+            padding: 60px 8%;
+        }
+
+        /* Footer */
+        .footer {
+            background: #825feb;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+
+        .header {
+            width: 100%;
+            background: #ffffff;
+
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+
+
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            color: blue;
+        }
+
+        .footer {
+            width: 100%;
+            background: #825feb;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: blue;
+            text-decoration: none;
+        }
+
+        button {
+            background: #825feb;
+            padding: 10px 15px;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        section {
+            flex: 1;
+            padding: 60px 8%;
+        }
+
+        .about img {
+            width: 350px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid black;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .about-txt h1 {
+            margin-bottom: 15px;
+        }
+
+        address {
+            margin-left: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div>
+            <h2>About Company</h2>
+        </div>
+        <nav class="navbar" id="navbar">
+            <a href="about.html" target="_self"> About</a>
+            <a href="tech.html" target="_self"> Tech Stack</a>
+            <a href="project.html"> Projects</a>
+        </nav>
+
+        <a href="sample-pdf.pdf" download>
+            <button type="button">Download Details</button>
+        </a>
+    </header>
+    <section>
+        <div class="about-container">
+            <div class="about">
+                <img src="web.jpg">
+            </div>
+
+            <div class="about-txt">
+                <h1>About Us!</h1>
+                <p>Our company is a dynamic and customer-focused organization committed to delivering innovative digital
+                    solutions that help businesses grow and succeed in the modern world. With a strong foundation in web
+                    development, software services, and technology consulting, we strive to create reliable, secure, and
+                    user-friendly applications tailored to our clients’ unique needs. Our team of skilled professionals
+                    combines creativity with technical expertise to provide high-quality results on time and within
+                    budget. We believe in building long-term partnerships through trust, transparency, and continuous
+                    improvement, making us a dependable choice for businesses seeking excellence in the digital space.
+                </p>
+            </div>
+        </div>
+
+        <address>
+            <h1>Contact Us!</h1>
+            <br>
+            <strong>COMPANY NAME</strong><br>
+            2nd Floor, Tech Park Building<br>
+            CG Road, Ahemdabad - 380009<br>
+            Gujarat, India<br>
+            Phone: +91 98765 43210<br>
+            Email: info@yourcompany.com
+        </address>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <p><b> &copy 2026 About Company. All rights reserved.</p>
+            <div>
+
+                <a href="https://github.com/aasana-lalani25" target="_blank">
+                    Click here for Github Profile
+                </a>
+                <br>
+                <a href="https://www.linkedin.com/in/aasana-lalani-817038229/" target="_blank">
+                    Click here of linkedIn Profile
+                </a>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
