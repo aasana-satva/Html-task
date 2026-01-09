@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>task 5 / 6</title>
+    <style>
+         button {
+            grid-column: 2;
+            margin-top: 15px;
+            width: 120px;
+            padding: 7px;
+            background: #4e777a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 3px;
+            
+        }
+
+        button:hover {
+            background: #4e777a;
+        }
+
+        
+
+        h1, h2, audio ,video ,form{
+            margin-left: 400px;
+        }
+      
+        
+        
+    </style>
+</head>
+
+<body>
+    <h1>Task 7</h1>
+    <h2>Audio Tag</h2>
+    <audio controls>
+        <source src="sample.mp3" type="audio/mp3">
+    </audio>
+
+    <h2> Video tag</h2>
+
+    <video width="400" controls style="border-radius: 20px;">
+        <source src="sample-5s.mp4" type="video/mp4">
+    </video>
+
+    <h1>Task 6</h1>
+    <h2> Download file</h2>
+    <form>
+    <a href="sample-pdf.pdf" download>
+        <button type="button">Download File</button>
+    </a>
+
+
+    <br>
+    <br>
+    <br>
+
+    </form>
+    <h2> Upload File</h2>
+    <form>
+    <input type="file"  id="filebox" accept=".xls, .xlsx, .xlsm ,.xlsb ,.csv" required />
+    <br><br>
+
+    <button type="button" onclick="
+        var file = document.getElementById('filebox').files[0];
+
+        if(!file){
+            document.getElementById('result').innerHTML = 'Please select the file';
+            return;
+        }
+
+        var name = file.name.toLowerCase();
+
+        if(name.endsWith('.xls') || name.endsWith('.xlsx')||name.endsWith('.csv')){
+            document.getElementById('result').innerHTML = 'File is Excel';
+            alert('Excel File Uploaded!');
+        }
+        else{
+            document.getElementById('result').innerHTML = 'Please upload an Excel file only';
+        }
+    ">
+        Upload Excel File
+    </button>
+</form>
+
+<p style="margin-left: 400px;" id="result"></p>
+
+    </form>
+</body>
+
+</html>
