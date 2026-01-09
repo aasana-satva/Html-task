@@ -34,62 +34,62 @@
             padding: 25px;
         }
 
-        form{
+        form {
             display: table;
         }
 
-        p{
+        p {
             display: table-row;
         }
 
-        input{
+        input {
             display: table-cell;
         }
 
         input[type="text"] {
-  border: 2px solid #1d1c1c;
-  border-radius: 4px;
-  height: 30px;
-  width: 700px;
-}
+            border: 2px solid #1d1c1c;
+            border-radius: 4px;
+            height: 30px;
+            width: 700px;
+        }
 
-input[type="email"] {
-  border: 2px solid #1d1c1c;
-  border-radius: 4px;
-  height: 30px;
-  width: 700px;
-}
+        input[type="email"] {
+            border: 2px solid #1d1c1c;
+            border-radius: 4px;
+            height: 30px;
+            width: 700px;
+        }
 
-input[type="password"] {
-border: 2px solid #1d1c1c;
-  border-radius: 4px;
-  height: 30px;
-  width: 700px;
-}
+        input[type="password"] {
+            border: 2px solid #1d1c1c;
+            border-radius: 4px;
+            height: 30px;
+            width: 700px;
+        }
 
-input[type="tel"] {
-  border: 2px solid #1d1c1c;
-  border-radius: 4px;
-  height: 30px;
-  width: 700px;
-}
+        input[type="tel"] {
+            border: 2px solid #1d1c1c;
+            border-radius: 4px;
+            height: 30px;
+            width: 700px;
+        }
 
-input[type="date"] {
-  border: 2px solid #1d1c1c;
-  border-radius: 4px;
-  height: 30px;
-  width: 700px;
-}
+        input[type="date"] {
+            border: 2px solid #1d1c1c;
+            border-radius: 2px;
+            height: 30px;
+            width: 700px;
+        }
 
-textarea{
-    border: 2px solid #1d1c1c;
-  border-radius: 4px;
-  width: 700px;
-  resize: vertical;
-  
-}
+        textarea {
+            border: 2px solid #1d1c1c;
+            border-radius: 4px;
+            width: 700px;
+            resize: vertical;
 
-        label{
+        }
+
+        label {
             display: table-cell;
         }
 
@@ -124,7 +124,7 @@ textarea{
         <form onsubmit="alert('The data is Registered')">
             <p>
                 <label>First Name:</label>
-                <input type="text" placeholder="Enter your first name" required>
+                <input type="text" placeholder="Enter your first name" required autofocus>
             </p>
             <br>
 
@@ -136,7 +136,7 @@ textarea{
             <br>
             <p>
                 <label>Email:</label>
-                <input type="email" placeholder="It should contain @" required>
+                <input type="email" placeholder="It should contain @"  required>
             </p>
 
             <br>
@@ -149,7 +149,7 @@ textarea{
             <br>
             <p>
                 <label>Gender:</label>
-                <input type="radio" name="gender" value="male" checked required> Male
+                <input type="radio" name="gender" value="male" required> Male
                 <input type="radio" name="gender" value="male"> Female
 
             </p>
@@ -199,7 +199,7 @@ textarea{
             <br>
             <p>
                 <label>Specialization:</label>
-                <input type="checkbox" name="spec" > Computer Science  <br>
+                <input type="checkbox" name="spec"> Computer Science <br>
                 <input type="checkbox" name="spec"> Information Teachnology <br>
                 <input type="checkbox" name="spec"> Computer Architecture <br>
                 <input type="checkbox" name="spec"> Tale Communication <br>
