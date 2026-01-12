@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Task 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="bootstrap/bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <!-- Responsive column -->
+            <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                <div class="card shadow p-4">
+                    <h4 class="text-center mb-4">Register</h4>
+
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required />
+                            <div class="invalid-feedback">Please enter a valid email.</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password"
+                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[a-zA-Z\d@$!%*#?&]{8,}"
+                                title="password should conatin at least 1 Uppercase 1 Lowercase 1 Special characters 1 digit and 8 characters long"
+                                id="password" class="form-control" required minlength="8" />
+                            <div class="invalid-feedback">
+                                password should conatin at least 1 Uppercase 1 Lowercase 1 Special characters 1 digit
+                                and 8 characters long
+                            </div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Confirm Password</label>
+                            <input type="password" id="confirmPassword" class="form-control" required />
+                            <div class="invalid-feedback">Passwords do not match.</div>
+                            <div class="valid-feedback">Passwords match!</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">URL</label>
+                            <input type="url" class="form-control" required />
+                            <div class="invalid-feedback">Please enter a valid URL.</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+
+                        <button class="btn btn-primary w-100 mt-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (() => {
+            "use strict";
+
+            const form = document.querySelector(".needs-validation");
+            const password = document.getElementById("password");
+            const confirm = document.getElementById("confirmPassword");
+
+            // Password match check
+            confirm.addEventListener("input", () => {
+                if (confirm.value !== password.value) {
+                    confirm.setCustomValidity("Invalid");
+                } else {
+                    confirm.setCustomValidity("");
+                }
+            });
+
+            // Bootstrap validation handling
+            form.addEventListener("submit", (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                else {
+                    event.preventDefault();   // stop real submit for demo
+                    alert("Data recorded successfully!");
+                    form.reset();             // optional: clear form
+                    form.classList.remove("was-validated");
+                }
+
+                form.classList.add("was-validated");
+            });
+        })();
+    </script>
+</body>
+
+</html>
