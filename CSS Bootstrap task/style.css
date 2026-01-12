@@ -1,0 +1,19 @@
+body {
+  background: #f4f7fb;
+}
+
+.box {
+  border: 2px solid black;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.box1 {
+  background: #d9ebf8;
+  border: 1px solid #333;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
