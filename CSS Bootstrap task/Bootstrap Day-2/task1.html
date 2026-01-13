@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Task-1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS -->
+<script src="bootstrap/bundle.min.js"></script>
+</head>
+
+<body class="bg-light">
+
+<div class="container text-center py-5">
+
+    <button class="btn btn-danger mx-1"
+            data-bs-toggle="tooltip"
+            data-bs-placement="left"
+            title="A demo of left tooltip">
+        Left Demo
+    </button>
+
+    <button class="btn btn-success mx-1"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            title="A demo of bottom tooltip">
+        Bottom Demo
+    </button>
+
+    <button class="btn btn-warning mx-1"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="A demo of top tooltip">
+        Top Demo
+    </button>
+
+    <button class="btn btn-primary mx-1"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="A demo of right tooltip">
+        Right Demo
+    </button>
+
+</div>
+
+<!--Activate tooltip-->
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+</script>
+
+</body>
+</html>
