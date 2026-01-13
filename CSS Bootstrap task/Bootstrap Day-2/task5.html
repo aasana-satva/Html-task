@@ -8,7 +8,8 @@
 
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <script src="bootstrap/bundle.min.js"></script>
-</head>
+    <link href="style.css" rel="stylesheet">
+</head> 
 
 <body class="bg-light p-5">
     <div class="container text-center">
@@ -19,7 +20,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="appointmentModal">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <form id="appointmentForm" class="needs-validation" novalidate>
                     <div class="modal-header">
@@ -52,7 +53,7 @@
                         <div class="mb-3">
                             <label class="form-label">What course do you need with help?</label>
                             <select class="form-select" required>
-                                <option value="">Choose...</option>
+                                <option value="">Choose</option>
                                 <option>AIML</option>
                                 <option>.Net</option>
                                 <option>MERN</option>
@@ -64,7 +65,7 @@
                         <div class="mb-3">
                             <label class="form-label">Name of Preffered tutor</label>
                             <select class="form-select" required>
-                                <option value="">Choose...</option>
+                                <option value="">Choose</option>
                                 <option>Mr. Smith</option>
                                 <option>Dr. Johnson</option>
                                 <option>Dr. Patel</option>
@@ -79,7 +80,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Appointment Time</label>
+                            <label  class="form-label">Appointment Time</label>
                             <input type="time" class="form-control" required />
                             <div class="invalid-feedback">Select time</div>
                         </div>
