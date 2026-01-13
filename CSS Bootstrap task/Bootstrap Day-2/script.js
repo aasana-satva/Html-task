@@ -21,6 +21,20 @@ if (registerForm) {
     }
   });
 
+  function togglePassword(fieldId, icon) {
+    const input = document.getElementById(fieldId);
+
+    if (input.type === "password") {
+      input.type = "text";
+      icon.classList.remove("bi-eye-slash");
+      icon.classList.add("bi-eye");
+    } else {
+      input.type = "password";
+      icon.classList.remove("bi-eye");
+      icon.classList.add("bi-eye-slash");
+    }
+  }
+
   // Submit validation
   registerForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -88,29 +102,29 @@ const modalElement = document.getElementById("appointmentModal");
 
 // Handle form submit
 appointmentform.addEventListener("submit", function (e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    appointmentform.classList.add("was-validated");
+  appointmentform.classList.add("was-validated");
 
-    // Stop if form is invalid
-    if (!appointmentform.checkValidity()) return;
+  // Stop if form is invalid
+  if (!appointmentform.checkValidity()) return;
 
-    alert("Appointment Scheduled Successfully!");
+  alert("Appointment Scheduled Successfully!");
 
-    // Reset form after successful submit
-    appointmentform.reset();
-    appointmentform.classList.remove("was-validated");
+  // Reset form after successful submit
+  appointmentform.reset();
+  appointmentform.classList.remove("was-validated");
 
-    // Close modal
-    const modal = bootstrap.Modal.getInstance(modalElement) 
-               || new bootstrap.Modal(modalElement);
+  // Close modal
+  const modal = bootstrap.Modal.getInstance(modalElement)
+    || new bootstrap.Modal(modalElement);
 
-    modal.hide();
+  modal.hide();
 });
 
 // Clear form whenever modal is closed
 modalElement.addEventListener("hidden.bs.modal", function () {
-    appointmentform.reset();
-    appointmentform.classList.remove("was-validated");
+  appointmentform.reset();
+  appointmentform.classList.remove("was-validated");
 });
 
