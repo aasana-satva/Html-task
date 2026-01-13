@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Task 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap/bundle.min.js"></script>
+</head>
+
+<body class="bg-light p-5">
+    <div class="container text-center">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+            Book Appointment
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="appointmentModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="appointmentForm" class="needs-validation" novalidate>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Schedule Appointment</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">First Name</label>
+                            <input type="text" onkeypress="return event.charCode>=65 && event.charCode<=122"
+                                class="form-control" required />
+                            <div class="invalid-feedback">Name is required</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" onkeypress="return event.charCode>=65 && event.charCode<=122"
+                                class="form-control" required />
+                            <div class="invalid-feedback">Name is required</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">UNCC Email</label>
+                            <input type="email" class="form-control" pattern="^[a-zA-Z0-9._%+-]+@uncc\.edu$"
+                                placeholder="example@uncc.edu" required />
+                            <div class="invalid-feedback">Enter valid email</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">What course do you need with help?</label>
+                            <select class="form-select" required>
+                                <option value="">Choose...</option>
+                                <option>AIML</option>
+                                <option>.Net</option>
+                                <option>MERN</option>
+                                <option>MEAN</option>
+                            </select>
+                            <div class="invalid-feedback">Select course</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Name of Preffered tutor</label>
+                            <select class="form-select" required>
+                                <option value="">Choose...</option>
+                                <option>Mr. Smith</option>
+                                <option>Dr. Johnson</option>
+                                <option>Dr. Patel</option>
+                            </select>
+                            <div class="invalid-feedback">Select tutor</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Appointment Date</label>
+                            <input type="date" class="form-control" required />
+                            <div class="invalid-feedback">Select date</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Appointment Time</label>
+                            <input type="time" class="form-control" required />
+                            <div class="invalid-feedback">Select time</div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">
+                            Schedule Appointment
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
