@@ -1,0 +1,39 @@
+const form = document.getElementById("empForm");
+      
+        const fileInput = document.getElementById("profilePic");
+        const browseBtn = document.getElementById("browseBtn");
+        const fileName = document.getElementById("fileName");
+      
+        // Open file dialog
+        browseBtn.addEventListener("click", () => {
+          fileInput.click();
+        });
+      
+        // Image validation
+        fileInput.addEventListener("change", function () {
+          const file = this.files[0];
+          const allowedTypes = ["image/jpeg", "image/png", "image/jpg", "image/gif", "image/webp"];
+      
+          if (file && !allowedTypes.includes(file.type)) {
+            this.value = "";
+            fileName.value = "";
+            alert("Only image files are allowed (JPG, PNG, GIF, WEBP)");
+          } else if (file) {
+            fileName.value = file.name;
+          }
+        });
+      
+        // Submit validation
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          form.classList.add("was-validated");
+      
+          if (!form.checkValidity()) return;
+      
+          alert("Employee data submitted successfully!");
+      
+          form.reset();
+          fileName.value = "";
+          form.classList.remove("was-validated");
+        });
+      </script>

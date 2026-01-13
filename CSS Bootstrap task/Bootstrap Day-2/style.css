@@ -1,0 +1,50 @@
+/* body {
+    background: #8c8c8c;
+} */
+
+/* task2 */
+.form-card {
+    max-width: 520px;
+}
+
+.subtitle {
+    color: #b0b0b0;
+}
+
+.form-box {
+    max-width: 900px;
+}
+
+.header {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+}
+ /*task 4*/
+.box{
+    border:2px solid green;
+    border-radius:10px;
+    padding:10px 0;
+    text-align:center;
+    color:green;
+    font-weight:600;
+}
+
+/*task 6*/
+.box1 {
+    background-color: #fde2dd;
+    border: 1px solid #ddd;
+    padding: 18px;
+}
+
+.title {
+    font-weight: 600;
+    margin: 15px 0 8px;
+}
+
+.section {
+    border: 1px solid #d9dee4;
+    padding: 0%;
+    margin-bottom: 20px;
+}
