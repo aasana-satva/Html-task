@@ -15,7 +15,7 @@
 
 <body>
     <div class="container py-5">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" >
             <!-- Responsive column -->
             <div class="col-12 col-sm-10 col-md-8 col-lg-6">
                 <div class="card shadow p-4">
@@ -66,11 +66,11 @@
     <script>
         (() => {
             "use strict";
-
+        
             const form = document.querySelector(".needs-validation");
             const password = document.getElementById("password");
             const confirm = document.getElementById("confirmPassword");
-
+        
             // Password match check
             confirm.addEventListener("input", () => {
                 if (confirm.value !== password.value) {
@@ -79,23 +79,32 @@
                     confirm.setCustomValidity("");
                 }
             });
-
+        
             // Bootstrap validation handling
             form.addEventListener("submit", (event) => {
+                event.preventDefault();
+        
                 if (!form.checkValidity()) {
-                    event.preventDefault();
                     event.stopPropagation();
+                    form.classList.add("was-validated");
+                    return;
                 }
-                else {
-                    event.preventDefault();   // stop real submit for demo
-                    alert("Data recorded successfully!");
-                    form.reset();             // optional: clear form
-                }
-
-                form.classList.add("was-validated");
+        
+                // Success
+                alert("Data recorded successfully!");
+        
+                // Reset form values
+                form.reset();
+        
+                // Remove all validation states
+                form.classList.remove("was-validated");
+        
+                // Remove custom validity message
+                confirm.setCustomValidity("");
             });
         })();
-    </script>
+        </script>
+        
 </body>
 
 </html>
