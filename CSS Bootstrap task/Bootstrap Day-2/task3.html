@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap/bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body style="background:#f1f1f1;">
+
+    <div class="container py-4">
+        <div class="card shadow form-box mx-auto">
+
+            <div class="header">EMPLOYEE FORM</div>
+
+            <div class="card-body">
+                <form id="empForm" novalidate>
+
+                    <!-- Names -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">First name</label>
+                            <input class="form-control" onkeypress="return event.charCode>=65 && event.charCode<=122"
+                                required>
+                            <div class="invalid-feedback">First name required</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Last name</label>
+                            <input class="form-control" onkeypress="return event.charCode>=65 && event.charCode<=122"
+                                required>
+                            <div class="invalid-feedback">Last name required</div>
+                        </div>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label class="form-label">Gender</label>
+                            <select class="form-select" required>
+                                <option value="">Choose...</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                            <div class="invalid-feedback">Select gender</div>
+                        </div>
+
+                        <!-- Email-->
+                        <div class="col-md-4">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                            <div class="invalid-feedback">Valid email required</div>
+                        </div>
+
+                        <!-- Mobile-->
+                        <div class="col-md-4">
+                            <label class="form-label">Mobile Number</label>
+                            <input type="tel" class="form-control" pattern="[0-9]{10}"
+                                onkeypress="return event.charCode>=48 && event.charCode<=57" maxlength="10" required>
+                            <div class="invalid-feedback">Enter 10 digit mobile number</div>
+                        </div>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="mb-3">
+                        <label class="form-label">Mandatory Skills</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="skill" required>
+                            <label class="form-check-label ">HTML 5</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="skill">
+                            <label class="form-check-label ">Javascript</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="skill">
+                            <label class="form-check-label">C# Programming</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="skill">
+                            <label class="form-check-label ">ASP.NET</label>
+                        </div>
+                        <div class="invalid-feedback">Please select one skill</div>
+                    </div>
+
+                    <!-- Profile -->
+                    <div class="mb-3">
+                        <label class="form-label">Profile Picture</label>
+
+                        <div class="input-group has-validation">
+                            <input type="file" id="profilePic" class="form-control" accept="image/*" required hidden>
+
+                            <input type="text" class="form-control" placeholder="Choose file" id="fileName" required>
+
+                            <button class="btn btn-outline-secondary" type="button" id="browseBtn">
+                                Browse
+                            </button>
+
+                            <div class="invalid-feedback">Upload image file</div>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="mb-3">
+                        <label class="form-label">Address</label>
+                        <textarea class="form-control" rows="3" required></textarea>
+                        <div class="invalid-feedback">Address required</div>
+                    </div>
+
+                    <!-- Terms -->
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="terms" required>
+                        <label class="form-check-label">Agree to terms and conditions</label>
+                        <div class="invalid-feedback">
+                            You must agree to the terms and conditions before registering.
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="text-end">
+                        <button type="reset" class="btn btn-danger me-2">Cancel</button>
+                        <button id="submitBtn" class="btn btn-primary">Register</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
