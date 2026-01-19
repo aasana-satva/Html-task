@@ -1,0 +1,109 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.btn-login {
+  background-color: #1f4d3b;
+  color: #fff;
+}
+
+.btn-login:hover {
+  background-color: #183d30;
+  color: #fff;
+}
+
+.form-control {
+  height: 45px;
+}
+
+/*task 2*/
+.box {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.orange {
+  background-color: #ff6b4a;
+}
+
+.blue {
+  background-color: #b7e1ee;
+  color: #000;
+}
+
+/* task 3 */
+/* NAVBAR */
+.navbar {
+  background-color: #4f8f88; /* or your navbar color */
+}
+
+/* HERO SECTION */
+.hero {
+  background-color: #78c2b8; /* SAME color */
+  color: white;
+  padding: 140px 20px 100px; /* top padding accounts for navbar */
+}
+
+.hero p {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* FEATURE ICONS */
+.feature-icon {
+  font-size: 60px;
+  color: grey;
+  margin-bottom: 15px;
+}
+
+/* IMAGE SECTION */
+.image-section {
+  background: url("images/task3.jpg") center/cover no-repeat;
+  height: 300px;
+}
+
+.image-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* task 7 */
+/* Gradient button base */
+.btn-gradient {
+  color: #fff;
+  font-weight: 500;
+  border: none;
+}
+
+.btn-primary-grad {
+  background: linear-gradient(to bottom, #2aa1d3 50%, #1f8fc5 50%);
+}
+
+.btn-success-grad {
+  background: linear-gradient(to bottom, #45c97a 50%, #2eb85c 50%);
+}
+
+.btn-info-grad {
+  background: linear-gradient(to bottom, #6ed3f0 50%, #4fc3e8 50%);
+}
+
+.btn-warning-grad {
+  background: linear-gradient(to bottom, #f4b04a 50%, #f39c12 50%);
+}
+
+.btn-danger-grad {
+  background: linear-gradient(to bottom, #f27d7d 50%, #e74c3c 50%);
+}
+
+.btn-dark-shadow {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
