@@ -1,0 +1,21 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  label {
+    font-weight: 500;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  
+  input.error, select.error {
+    border: 1px solid red !important;
+  }
+  
+  input.valid, select.valid {
+    border: 1px solid green !important;
+  }
+  
