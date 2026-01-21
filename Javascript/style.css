@@ -1,0 +1,51 @@
+body {
+    background: #f2f2f2;
+  }
+
+  .card {
+    background: #ddd;
+    padding: 30px;
+    border: none;
+    border-radius: 4px;
+    margin: 50px;
+  }
+
+
+  .form-step {
+    display: none;
+  }
+  .form-step.active {
+    display: block;
+  }
+  .step-dots span {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .step-dots .active {
+    background: #5cb85c;
+  }
+  table {
+    width: 100%;
+    margin-top: 20px;
+    background: #f7f4f4;
+  }
+  th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+
+
+  .btn-primary{
+    width: max-content;
+    margin-left: 45%;
+  }
+
+  .answer-input {
+    background: #eef1f4;
+    font-weight: 500;
+  }
