@@ -1,0 +1,9 @@
+/* simple styling */
+body {
+    background: #f8f9fa;
+    }
+    
+    
+    .table input, .table select {
+    min-width: 120px;
+    }
