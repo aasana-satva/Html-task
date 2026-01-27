@@ -1,0 +1,17 @@
+body {
+    background: #f4f6f9;
+  }
+  
+  #calendar {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    margin: 20px;
+  }
+  
+  small.error {
+    color: #dc2626;
+    font-size: 0.85rem;
+  }
+  
