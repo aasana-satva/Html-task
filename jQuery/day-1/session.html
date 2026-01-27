@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Storage Form</title>
+</head>
+<body>
+  <h2>Simple Form</h2>
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" /><br /><br />
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" /><br /><br />
+    
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('myForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+
+    // 1. Load saved data when page loads
+    window.addEventListener('load', () => {
+      if(sessionStorage.getItem('name')) {
+        nameInput.value = sessionStorage.getItem('name');
+      }
+      if(sessionStorage.getItem('email')) {
+        emailInput.value = sessionStorage.getItem('email');
+      }
+    });
+
+    // 2. Save data when user types
+    nameInput.addEventListener('input', () => {
+      sessionStorage.setItem('name', nameInput.value);
+    });
+
+    emailInput.addEventListener('input', () => {
+      sessionStorage.setItem('email', emailInput.value);
+    });
+  </script>
+</body>
+</html>
