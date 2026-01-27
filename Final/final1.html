@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="eg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final1</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
+
+    <link rel="stylesheet" href="final1.html" />
+  </head>
+  <body>
+    <div class="container my-4">
+      <h4 class="mb-3">Timesheet Entry</h4>
+
+
+      <div class="table-responsive">
+        <table class="table table-bordered" id="entryTable">
+          <thead class="table-light">
+            <tr>
+              <th>ID</th>
+              <th>Project</th>
+              <th>Date</th>
+              <th>Phase</th>
+              <th>Status</th>
+              <th>Logged Hrs</th>
+              <th>Billable Hrs</th>
+              <th>Notes</th>
+              <th>Out of Stock</th>
+              <th>BC Link</th>
+              <th>BC Description</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    
+        <div class="d-flex gap-2 mt-5 justify-content-center">
+                <!-- Controls -->
+        <button class="btn btn-danger" id="deleteRow">Delete Last Row</button>
+        <br>
+        <br>
+            <input
+              type="number"
+              id="rowCount"
+              class="form-control w-25"
+              placeholder="No of rows"
+              min="0"
+            />
+            <button class="btn btn-primary" id="addRow">Add Row</button>
+        
+          </div>
+
+      <div class="table-responsive mt-4 d-none" id="displayWrapper">
+        <table class="table table-dark table-striped" id="displayTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Project</th>
+              <th>Date</th>
+              <th>Phase</th>
+              <th>Status</th>
+              <th>Logged</th>
+              <th>Billable</th>
+              <th>Notes</th>
+              <th>OOS</th>
+              <th>BC</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exceljs/dist/exceljs.min.js"></script>
+    <script src="final1.js"></script>
+  </body>
+</html>
