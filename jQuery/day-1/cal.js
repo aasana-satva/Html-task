@@ -1,132 +1,86 @@
 const display = document.getElementById("display");
- 
-let firstValue = "";
-let secondValue = "";
-let operator = "";
-let isPercent = false;
-let isSecondValue = false;
- 
+let expression = "";
+
+/* ---------- DISPLAY ---------- */
 function updateDisplay() {
-    if (!operator) {
-        display.innerText = firstValue || "0";
-    } else if (isSecondValue && secondValue === "") {
-        display.innerText = firstValue + " " + operator;
-    } else {
-        display.innerText = firstValue + " " + operator + " " + secondValue;
-    }
+    display.innerText = expression || "0";
 }
 
-// Number button
+/* ---------- NUMBER ---------- */
 function pressNumber(num) {
-    if (!isSecondValue) {
-        firstValue += num;
-        display.innerText = firstValue;
-    } else {
-        secondValue += num;
-        display.innerText = secondValue;
+    // implicit multiply after %
+    if (/%$/.test(expression)) {
+        expression += "x";
     }
-     updateDisplay();
+    expression += num;
+    updateDisplay();
 }
- 
-// Decimal
+
+/* ---------- DECIMAL ---------- */
 function pressDecimal() {
-    if (!isSecondValue) {
-        if (!firstValue.includes(".")) firstValue += ".";
-        display.innerText = firstValue;
-    } else {
-        if (!secondValue.includes(".")) secondValue += ".";
-        display.innerText = secondValue;
+    const last = expression.split(/[+\-x÷]/).pop().replace('%','');
+    if (!last.includes(".")) {
+        expression += ".";
+        updateDisplay();
     }
-    updateDisplay();
 }
- 
-// Operator
+
+/* ---------- OPERATOR ---------- */
 function pressOperator(op) {
-    if (firstValue === "" && op === "-") {
-        firstValue = "-";
-        updateDisplay();
-        return;
+    if (!expression && op !== "-") return;
+    if (/[+\-x÷]$/.test(expression)) {
+        expression = expression.slice(0, -1);
     }
-
-    //  Block operator only if "-" alone
-    if (firstValue === "-") return;
-
-    // Unary percentage (6 → % → 0.06, auto-multiply)
-    if (op === "%" && firstValue !== "" && !isSecondValue) {
-        firstValue = (parseFloat(firstValue) / 100).toString();
-        operator = "x";
-        isSecondValue = true;
-        secondValue = "";
-        updateDisplay();
-        return;
-    }
-
-    //  Chained calculation (6 + 6 x ...)
-    if (operator && secondValue !== "") {
-        pressEqual();
-    }
-
-    operator = op;
-    isSecondValue = true;
+    expression += op;
     updateDisplay();
 }
- 
- 
-// AC
-function pressAC() {
-    firstValue = "";
-    secondValue = "";
-    operator = "";
-    isPercent = false;
-    isSecondValue = false;
-    display.innerText = "0";
+
+/* ---------- % (CORRECT) ---------- */
+function pressPercent() {
+    const match = expression.match(/(\d+\.?\d*)$/);
+    if (!match) return;
+
+    const value = (parseFloat(match[1]) / 100).toString();
+    expression = expression.replace(/(\d+\.?\d*)$/, value + "%");
+    updateDisplay();
 }
- 
-// Equal
+
+/* ---------- EQUAL ---------- */
 function pressEqual() {
-    if (!firstValue || !operator) return;
-    if (!secondValue) secondValue = "0";
- 
-    let a = parseFloat(firstValue);
-    let b = parseFloat(secondValue);
- 
-    let result;
- 
-    switch(operator) {
-        case "+":
-            if (isPercent) {
-                b = (a * b) / 100; // convert second number to % of first
-            }
-            result = a + b;
-            break;
-        case "-":
-            if (isPercent) {
-                b = (a * b) / 100;
-            }
-            result = a - b;
-            break;
-        case "x":
-            result = a * b;
-            break;
-        case "÷":
-            result = a / b;
-            break;
-        case "%":
-            result = (a * b) / 100; // a% of b
-            break;
-        default:
-            result = b;
-            break;
+    if (!expression) return;
+
+    try {
+        let evalExpr = expression
+            .replace(/x/g, "*")
+            .replace(/÷/g, "/")
+            .replace(/%/g, ""); // % is display-only
+
+        const result = Function("return " + evalExpr)();
+        expression = result.toString();
+        updateDisplay();
+    } catch {
+        display.innerText = "Error";
+        expression = "";
     }
- 
-    display.innerText = result.toString();
- 
-    // Reset for next calculation
-    firstValue = result.toString();
-    secondValue = "";
-    operator = "";
-    isPercent = false;
-    isSecondValue = false;
 }
- 
- 
+
+/* ---------- CLEAR ---------- */
+function pressAC() {
+    expression = "";
+    updateDisplay();
+}
+
+/* ---------- KEYBOARD ---------- */
+document.addEventListener("keydown", e => {
+    if (e.key >= "0" && e.key <= "9") pressNumber(e.key);
+    if (e.key === ".") pressDecimal();
+    if (["+","-","*","/"].includes(e.key)) {
+        pressOperator(e.key === "*" ? "x" : e.key === "/" ? "÷" : e.key);
+    }
+    if (e.key === "%") pressPercent();
+    if (e.key === "Enter") pressEqual();
+    if (e.key === "Backspace") {
+        expression = expression.slice(0, -1);
+        updateDisplay();
+    }
+});
