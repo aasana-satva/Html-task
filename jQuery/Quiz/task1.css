@@ -1,0 +1,119 @@
+body {
+    background: linear-gradient(135deg, #6366f1, #1fa4f1);
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  /* Main card */
+  .quiz-card {
+    width: 100%;
+    max-width: 600px;
+    min-height: 520px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.8s ease;
+  }
+  
+
+  .welcome-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    animation: zoomIn 0.8s ease;
+  }
+  
+  .welcome-image img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+  }
+  
+ 
+  .question-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    animation: fadeIn 0.8s ease;
+  }
+  
+  .question-image img {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* use 50% ONLY if image must be circular */
+    background: #ffffff;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .question-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  }
+
+  .feedback {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .correct {
+    color: #16a34a;
+    animation: scaleIn 0.4s ease;
+  }
+  
+  .incorrect {
+    color: #dc2626;
+    animation: shake 0.4s ease;
+  }
+  
+  /* =========================
+     Buttons
+  ========================= */
+  .btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1e40af;
+    border-color: #1e40af;
+  }
+  
+  label.error {
+    color: #dc2626;
+    font-size: 0.9rem;
+    margin-top: 6px;
+    display: block;
+  }
+  
+  /* =========================
+     Animations
+  ========================= */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+
+
+  
