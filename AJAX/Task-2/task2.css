@@ -1,0 +1,169 @@
+
+.main-content {
+  padding-top: 70px; /* space for fixed navbar */
+}
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.85);
+    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Bouncing dots animation */
+.dots {
+  display: flex;
+  gap: 10px;
+}
+.dots div {
+  width: 15px;
+  height: 15px;
+  background-color: #0d6efd;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+.dots div:nth-child(2) { animation-delay: 0.2s; }
+.dots div:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+/* welcome */
+
+/* Welcome Page Hero Section */
+.welcome-page {
+  height: 100vh; /* full viewport height */
+  background: linear-gradient(to right, #0d6efd, #6610f2); /* Gradient */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  margin: 50px;
+  border-radius: 15px;
+}
+
+/* Optional overlay for darker effect */
+.welcome-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* semi-transparent overlay */
+}
+
+/* Ensure content is above overlay */
+.welcome-page .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Button styling */
+.welcome-page .btn-primary {
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.welcome-page .btn-primary:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+.animate-fade {
+  animation: fadeIn 1s ease forwards;
+}
+.animate-fade-delay {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .welcome-page h1 {
+      font-size: 2.5rem;
+  }
+  .welcome-page p {
+      font-size: 1rem;
+  }
+}
+
+/* team */
+
+/* Team Section */
+.team-section {
+  background: #f8f9fa;
+}
+
+/* Team Card */
+.team-card {
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Avatar Image */
+.team-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* Social Icons */
+.social-icons a {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icons a:hover {
+  transform: translateY(-5px);
+  color: #0d6efd; /* Bootstrap primary color */
+}
+
+/* contact */
+/* Contact Section */
+.contact-section {
+  background: #f8f9fa;
+}
+
+/* Card style for info and form */
+.contact-info, .contact-form {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-info:hover, .contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Social icons */
+.contact-info .social-icons a {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.contact-info .social-icons a:hover {
+  color: #0d6efd;
+  transform: translateY(-3px);
+}
+
+/* Form input focus */
+.contact-form .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13,110,253,0.5);
+}
+
+/* Button hover */
+.contact-form .btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
