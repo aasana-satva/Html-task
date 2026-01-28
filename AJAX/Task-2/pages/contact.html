@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="task2.css" />
+  </head>
+  <body>
+    <section class="contact-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Contact Us</h2>
+          <p class="text-muted">
+            Have a question or want to work with us? Reach out using the form
+            below.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Contact Info -->
+          <div class="col-lg-5">
+            <div class="contact-info p-4 rounded shadow-sm bg-white">
+              <h5 class="mb-3">Get in Touch</h5>
+              <p>
+                <strong>Email:</strong>
+                <a href="mailto:contact@mysite.com">contact@mysite.com</a>
+              </p>
+              <p><strong>Phone:</strong> +91 99999 99999</p>
+              <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+              <div class="social-icons mt-3">
+                <a href="#" class="text-primary me-2"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="#" class="text-primary me-2"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+                <a href="#" class="text-primary"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="col-lg-7">
+            <div class="contact-form p-4 rounded shadow-sm bg-white">
+              <form id="contactForm">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                  <label for="name">Your Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                  <label for="email">Your Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    placeholder="Subject"
+                    required
+                  />
+                  <label for="subject">Subject</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <textarea
+                    class="form-control"
+                    placeholder="Your Message"
+                    id="message"
+                    style="height: 150px"
+                    required
+                  ></textarea>
+                  <label for="message">Your Message</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg w-100">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
