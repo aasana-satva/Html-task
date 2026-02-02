@@ -1,0 +1,241 @@
+body {
+  background-color: #f5f7fa;
+}
+
+.header {
+  background: #d9e8f5;
+  padding: 10px;
+  font-weight: bold;
+}
+
+input {
+  background-color: #f5f7fa;
+  border: 0;
+  width: 120px;
+}
+
+/* TRANSACTION CARD */
+.transaction-card {
+  background-color: #cfe8cc;
+  border: 1px solid #7aa874;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  cursor: grab;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.transaction-card:active {
+  cursor: grabbing;
+}
+
+/* Checkbox styling - tight spacing */
+.transaction-card .exclude-checkbox,
+.transaction-card .include-checkbox,
+.transaction-card .unreconcile-checkbox {
+  margin: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.transaction-card .d-flex {
+  gap: 8px;
+}
+
+.transaction-card label {
+  cursor: pointer;
+  margin: 0;
+  width: 100%;
+}
+
+/* LIST */
+.transaction-list {
+  width: 96%;
+  min-height: 150px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: grab;
+}
+
+#reconciliationContainer {
+  min-height: 100px;
+  width: 150%;
+  
+  padding: 10px;
+
+  
+}
+
+#loadMoreBtn{
+margin-left: 45%;
+}
+
+/* DROP ZONE — SAME BASE LOOK AS TRANSACTION LIST */
+.drop-zone {
+  min-height: 43px;
+  border: 1px dashed #ccc;
+  padding: 10px;
+  background: #fff;
+  border-radius: 4px;
+  border: 2px dashed #0d6efd;
+  background: #eef6ff;
+}
+
+.tab {
+  text-decoration: none;
+  font-weight: 600;
+  color: #555;
+}
+
+.tab.active {
+  color: #0d6efd;
+  border-bottom: 2px solid #0d6efd;
+}
+
+/* ===== CUSTOM CHECKBOX UI ===== */
+.exclude-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #5cb85c;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Checked state */
+.exclude-checkbox:checked {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+/* Tick mark */
+.exclude-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Hover effect */
+.exclude-checkbox:hover {
+  box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.2);
+}
+
+/* ===== TEXT + CHECKBOX ALIGN FIX ===== */
+.transaction-card .fw-bold {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* clean spacing */
+  line-height: 1.2;
+}
+
+/* ===== INCLUDE CHECKBOX UI ===== */
+.include-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #0d6efd; /* blue for include */
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Checked state */
+.include-checkbox:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* Tick mark */
+.include-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Hover effect */
+.include-checkbox:hover {
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+}
+
+/* ===== ALIGN FIX (NO GAP ISSUE) ===== */
+.transaction-card label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+/* ===== COMPANY HEADER CHECKBOX ===== */
+.select-all {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #6c757d; /* neutral gray */
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Checked state */
+.select-all:checked {
+  background-color: #198754; /* Bootstrap success green */
+  border-color: #198754;
+}
+
+/* Tick */
+.select-all:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Hover ring */
+.select-all:hover {
+  box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.25);
+}
+
+/* ===== COMPANY HEADING ALIGNMENT ===== */
+h5 {
+  margin-bottom: 12px;
+}
+
+h5.d-flex {
+  font-weight: 600;
+  color: #333;
+  user-select: none;
+}
+
+
