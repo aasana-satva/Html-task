@@ -67,7 +67,7 @@ $(document).ready(function () {
     });
 
 
-    // 3️ When state changes → load cities
+    //  When state changes → load cities
     $("#state").on("change", function () {
 
         let country = $("#country").val();
