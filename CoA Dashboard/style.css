@@ -1,0 +1,470 @@
+/* ---------------- NAVBAR STYLING ---------------- */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #495057 !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0d6efd !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0d6efd;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+  color: #0d6efd !important;
+  border-bottom: 2px solid #0d6efd;
+  padding-bottom: 6px;
+}
+
+.navbar-nav .dropdown-toggle::after {
+  display: none;
+}
+
+.navbar-nav .dropdown-menu {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.navbar-nav .dropdown-item:hover {
+  background-color: #f0f8ff;
+  color: #0d6efd;
+}
+
+/* ---------------- BUTTONS ---------------- */
+.tab-btn {
+  background-color: #ececec;
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+  font-size: 14px;
+  margin-right: 5px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  height: 40px;
+}
+
+.tab-btn.active {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+  border-color: #0d6efd !important;
+}
+
+.tab-btn:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+/* Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+/* Sticky Filter Button Section */
+section.bg-white {
+  position: sticky;
+  top: 72px;
+  z-index: 1019;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Main content container - no scroll on container */
+.container-fluid.mt-3 {
+  height: calc(100vh - 180px);
+  overflow: hidden;
+}
+
+.container-fluid.mt-3 .row.g-2:last-of-type {
+  height: 100%;
+  overflow: hidden;
+}
+
+.container-fluid.mt-3 .col-md-8 {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* Custom scrollbar for left column */
+.container-fluid.mt-3 .col-md-8::-webkit-scrollbar {
+  width: 3px;
+}
+
+.container-fluid.mt-3 .col-md-8::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.container-fluid.mt-3 .col-md-8::-webkit-scrollbar-thumb {
+  background: #adb5bd;
+  border-radius: 3px;
+}
+
+.container-fluid.mt-3 .col-md-8::-webkit-scrollbar-thumb:hover {
+  background: #6c757d;
+}
+
+.container-fluid.mt-3 .col-md-4 {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+/* Custom scrollbar for right column */
+.container-fluid.mt-3 .col-md-4::-webkit-scrollbar {
+  width: 3px;
+}
+
+.container-fluid.mt-3 .col-md-4::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.container-fluid.mt-3 .col-md-4::-webkit-scrollbar-thumb {
+  background: #adb5bd;
+  border-radius: 3px;
+}
+
+.container-fluid.mt-3 .col-md-4::-webkit-scrollbar-thumb:hover {
+  background: #6c757d;
+}
+
+/* ---------------- FILTER TABS ---------------- */
+.filter-tab {
+  font-size: 11px;
+  padding: 5px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background-color: #ececec;
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s;
+}
+
+.filter-tab.active {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+  border-color: #0d6efd !important;
+}
+
+.filter-tab:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+/* Navigation buttons for destination filters */
+.filter-nav-btn {
+  font-size: 24px;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-weight: normal;
+  min-width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background-color: transparent;
+  border: none;
+  color: #495057;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-nav-btn:hover {
+  background-color: transparent;
+  color: #0d6efd;
+}
+
+/* Wrapper for filter buttons - scrollable */
+.filter-buttons-wrapper {
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex: 1;
+  min-width: 0;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.filter-buttons-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Destination filters container - keep in one line */
+#destinationFilters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  align-items: center;
+  width: 100%;
+}
+
+/* ---------------- COLUMN HEADERS ---------------- */
+.column-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.column-sub {
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+/* Header Colors */
+.source-sub { background-color: #00a3e0; }
+.most-sub   { background-color: #00c2c7; }
+.likely-sub { background-color: #00c2c7; }
+.possible-sub { background-color: #5adce2; }
+.dest-sub {
+  background-color: #0a9b5c;
+  width: auto;
+  padding: 6px 10px;
+}
+
+/* ---------------- ACCOUNT BOX ---------------- */
+.account-box {
+  width: 100%;
+  border: 1px solid #dee2e6;
+  padding: 8px;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 13px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+
+.account-number {
+  font-weight: 600;
+  color: #212529;
+  font-size: 12px;
+}
+
+.account-name {
+  color: #6c757d;
+  font-size: 11px;
+  display: block;
+}
+
+.account-count {
+  color: #0d6efd;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* ---------------- DESTINATION ITEMS ---------------- */
+.dest-item {
+  padding: 8px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  background: #fff;
+  cursor: grab;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  transition: all 0.2s;
+}
+
+.dest-item:hover {
+  background-color: #e6f7ff;
+  border-color: #0d6efd;
+  transform: translateX(2px);
+}
+
+.dest-item:active {
+  cursor: grabbing;
+}
+
+.dest-item.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+/* Mapped items (items in drop boxes) */
+.mapped-item {
+  cursor: move;
+  margin-bottom: 0;
+  font-size: 11px;
+  max-height: 50px;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.mapped-item span {
+  font-size: 10px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  
+  -webkit-box-orient: vertical;
+}
+
+/* ---------------- DROP ZONES ---------------- */
+.drop-box {
+  width: 100%;
+  height: 50px;
+  border: 2px solid #adb5bd;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.drop-box .empty-slot {
+  color: #adb5bd;
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+}
+
+.drop-box.drag-over {
+  background-color: #e6f7ff;
+  border-color: #0d6efd;
+  border-style: solid;
+}
+
+/* Make drop boxes expand to fit content */
+.drop-box .dest-item {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+/* ---------------- DESTINATION LIST ---------------- */
+.dest-list {
+  overflow-y: auto;
+  max-height: calc(100vh - 280px);
+  padding-right: 5px;
+}
+
+.dest-list.drag-over {
+  background-color: #e6f7ff;
+  border: 2px dashed #0d6efd;
+  border-radius: 4px;
+}
+
+/* Custom scrollbar */
+.dest-list::-webkit-scrollbar {
+  width: 3px;
+}
+
+.dest-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.dest-list::-webkit-scrollbar-thumb {
+  background: #adb5bd;
+  border-radius: 3px;
+}
+
+.dest-list::-webkit-scrollbar-thumb:hover {
+  background: #6c757d;
+}
+
+/* ---------------- SEARCH BAR ---------------- */
+#searchDestination {
+  border: 1px solid #dee2e6;
+  font-size: 13px;
+}
+
+#searchDestination:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* ---------------- ROW ALIGNMENT ---------------- */
+.align-items-stretch {
+  align-items: stretch !important;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+/* ---------------- DRAGGING STATES ---------------- */
+.sortable-ghost {
+  opacity: 0.4;
+  background-color: #e6f7ff;
+}
+
+.sortable-drag {
+  opacity: 0.8;
+  transform: rotate(2deg);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .account-box,
+  .dest-item {
+    font-size: 11px;
+  }
+  
+  .tab-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  
+  .drop-box {
+    min-height: 40px;
+  }
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.dest-item,
+.account-box {
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* ---------------- EMPTY STATE ---------------- */
+.dest-list:empty::after {
+  content: "No accounts available";
+  display: block;
+  text-align: center;
+  color: #adb5bd;
+  padding: 20px;
+  font-size: 13px;
+}
