@@ -1,0 +1,8 @@
+.appContainer{
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 60px);
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}

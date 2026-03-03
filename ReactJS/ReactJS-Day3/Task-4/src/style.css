@@ -1,0 +1,33 @@
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: Arial;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  color: blue;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  background-color: #f3f3f3;
+}

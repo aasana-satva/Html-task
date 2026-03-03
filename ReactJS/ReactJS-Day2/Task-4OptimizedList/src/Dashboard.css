@@ -1,0 +1,24 @@
+.dashboard {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard h1 {
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+.time {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.list-container {
+  list-style: none;
+  padding: 0;
+}

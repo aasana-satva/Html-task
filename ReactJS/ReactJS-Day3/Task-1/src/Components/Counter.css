@@ -1,0 +1,63 @@
+.counter-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+
+  text-align: center;
+  font-family: Arial, sans-serif;
+  
+}
+
+.title {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.count {
+  font-size: 48px;
+  margin: 20px 0;
+  color: #2c3e50;
+}
+
+.button-group button,
+.set-value button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button-group button:hover,
+.set-value button:hover {
+  background-color: #2980b9;
+}
+
+.set-value {
+  margin-top: 15px;
+}
+
+.set-value input {
+  padding: 6px;
+  width: 120px;
+  margin-right: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.history {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.history ul {
+  padding-left: 20px;
+}
+
+.history li {
+  font-size: 14px;
+  color: #555;
+}

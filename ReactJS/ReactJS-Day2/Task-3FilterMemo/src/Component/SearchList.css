@@ -1,0 +1,100 @@
+/* GLOBAL THEME */
+body.light {
+  background-color: #ffffff;
+  color: #000;
+  min-height: 100vh;
+  transition: 0.3s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vsh;
+  transition: 0.3s;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 20px 20px; /* TOP PADDING IMPORTANT */
+  text-align: center;
+}
+
+
+
+/* NAVBAR - STICKY HEADER */
+.navbar {
+  position: fixed;   /* FIXED */
+  top: 0;
+  left: 0;
+  width: 100%;       /* FULL BROWSER WIDTH */
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #4caf50;
+  color: white;
+  padding: 15px 30px;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+
+.navbar h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* SEARCH BOX */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+
+/* INPUT */
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+/* BUTTON */
+button {
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background:black;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+
+/* LIST */
+ul {
+  margin: 0 auto;
+  max-height: 450px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  list-style: none;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.03);
+  width: 50%;
+}
+
+li {
+  padding: 6px 4px;
+  border-bottom: 1px solid #eee;
+}

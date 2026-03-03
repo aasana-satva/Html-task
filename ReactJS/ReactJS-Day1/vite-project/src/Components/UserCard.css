@@ -1,0 +1,19 @@
+.card {
+     text-align: center;
+    border :1px solid #ccc;
+    padding :15px;
+    margin: 10px auto;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.available{
+    color: green;
+    font-weight: bold;
+}
+
+.notAvailable{
+    color: red;
+    font-weight: bold;
+}

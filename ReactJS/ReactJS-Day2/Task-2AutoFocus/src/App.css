@@ -1,0 +1,43 @@
+.memo-container {
+  text-align: center;
+  margin-top: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.memo-container h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.memo-textarea {
+  width: 350px;
+  height: 150px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #4caf50;
+  outline: none;
+  resize: none;
+  transition: 0.3s;
+}
+
+.memo-textarea:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+.save-btn {
+  margin-top: 20px;
+  padding: 10px 18px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background-color: #388e3c;
+}

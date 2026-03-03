@@ -1,0 +1,35 @@
+/* Page Background */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+}
+
+
+.dashboard {
+  padding: 30px;
+  text-align: center;
+}
+
+
+.dashboard h1 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+
+.status-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+.status-card {
+  background: white;
+  width: 220px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
